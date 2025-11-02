@@ -334,7 +334,11 @@ static void fullStateDecoder(setpoint_t *setpoint, uint8_t type, const void *dat
   setpoint->attitudeRate.pitch = millirad2deg * values->ratePitch;
   setpoint->attitudeRate.yaw = millirad2deg * values->rateYaw;
 
+  #pragma GCC diagnostic push
+  #pragma GCC diagnostic ignored "-Wstringop-overflow"
   quatdecompress(values->quat, (float *)&setpoint->attitudeQuaternion.q0);
+  #pragma GCC diagnostic pop
+
   setpoint->mode.quat = modeAbs;
   setpoint->mode.roll = modeDisable;
   setpoint->mode.pitch = modeDisable;

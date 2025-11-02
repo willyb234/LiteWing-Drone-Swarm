@@ -48,7 +48,6 @@ typedef struct telemetry_data {
 // Global variables
 extern joystick_data joystickData;
 
-
 // ESP-NOW peer info
 extern uint8_t receiverMacAddress[];
 extern esp_now_peer_info_t peerInfo;
