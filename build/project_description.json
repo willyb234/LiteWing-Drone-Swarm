@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "ESPDrone",
-    "project_version":    "33ab3b1-dirty",
+    "project_version":    "ce64f1c-dirty",
     "project_path":       "C:/Users/mitch/git/LiteWing",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.5.1",
     "build_dir":          "C:/Users/mitch/git/LiteWing/build",

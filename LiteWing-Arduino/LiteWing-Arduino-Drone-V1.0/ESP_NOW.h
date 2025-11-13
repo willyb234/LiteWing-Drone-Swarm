@@ -61,7 +61,7 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status);
 inline void initESPNow() {
   // Set device as a Wi-Fi Station
   WiFi.mode(WIFI_STA);
-  
+
   Serial.print("MAC Address: ");
   Serial.println(WiFi.macAddress());
 

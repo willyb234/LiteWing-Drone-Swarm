@@ -171,7 +171,17 @@ void systemTask(void *arg)
 
   ledInit();
   ledSet(CHG_LED, 1);
-  wifiInit();
+  //wifiInit();
+  //MY CODE
+  //ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
+  wifi_init_sta();
+
+  wifi_connect_sta("OMG-UTA-DCSE 6011", "71;52Nk2");
+
+  //wifi_init_sta();
+  //wifi_connect_sta("OMG-UTA-DCSE 6011","71;52Nk2");
+  //MY CODE
+
   vTaskDelay(M2T(500));
 
 #ifdef DEBUG_QUEUE_MONITOR
