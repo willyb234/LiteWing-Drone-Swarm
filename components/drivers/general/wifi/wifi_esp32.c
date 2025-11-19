@@ -308,9 +308,9 @@ void wifiInit(void)
     ESP_ERROR_CHECK(espnow_ctrl_responder_bind(30 * 1000, -55, NULL));
     espnow_ctrl_responder_data(espnow_ctrl_data_cb);
     esp_netif_ip_info_t ip_info = {
-        .ip.addr = ipaddr_addr("192.168.43.42"),
+        .ip.addr = ipaddr_addr("192.168.1.121"),
         .netmask.addr = ipaddr_addr("255.255.255.0"),
-        .gw.addr      = ipaddr_addr("192.168.43.42"),
+        .gw.addr      = ipaddr_addr("192.168.1.1"),
     };
     ESP_ERROR_CHECK(esp_netif_dhcps_stop(ap_netif));
     ESP_ERROR_CHECK(esp_netif_set_ip_info(ap_netif, &ip_info));
@@ -346,12 +346,54 @@ static const char *TAG = "wifi station";
 
 int s_retry_num = 0;
 
+//DNS stuff
+static esp_err_t example_set_dns_server(esp_netif_t *netif, uint32_t addr, esp_netif_dns_type_t type)
+{
+    if (addr && (addr != IPADDR_NONE)) {
+        esp_netif_dns_info_t dns;
+        dns.ip.u_addr.ip4.addr = addr;
+        dns.ip.type = IPADDR_TYPE_V4;
+        ESP_ERROR_CHECK(esp_netif_set_dns_info(netif, type, &dns));
+    }
+    return ESP_OK;
+}
+
+
+//Static IP stuff
+#define EXAMPLE_MAIN_DNS_SERVER       "192.168.1.1"
+#define EXAMPLE_BACKUP_DNS_SERVER     "0.0.0.0"
+
+/*static void example_set_static_ip(esp_netif_t *netif)
+{
+    if (esp_netif_dhcpc_stop(netif) != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to stop dhcp client");
+        return;
+    }
+    esp_netif_ip_info_t ip;
+    memset(&ip, 0 , sizeof(esp_netif_ip_info_t));
+    char* EXAMPLE_STATIC_IP_ADDR = "192.168.1.120";
+    char* EXAMPLE_STATIC_NETMASK_ADDR = "255.255.255.0";
+    char* EXAMPLE_STATIC_GW_ADDR = "192.168.1.1";
+    ip.ip.addr = ipaddr_addr(EXAMPLE_STATIC_IP_ADDR);
+    ip.netmask.addr = ipaddr_addr(EXAMPLE_STATIC_NETMASK_ADDR);
+    ip.gw.addr = ipaddr_addr(EXAMPLE_STATIC_GW_ADDR);
+    if (esp_netif_set_ip_info(netif, &ip) != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to set ip info");
+        return;
+    }
+    ESP_LOGD(TAG, "Success to set static ip: %s, netmask: %s, gw: %s", EXAMPLE_STATIC_IP_ADDR, EXAMPLE_STATIC_NETMASK_ADDR, EXAMPLE_STATIC_GW_ADDR);
+    ESP_ERROR_CHECK(example_set_dns_server(netif, ipaddr_addr(EXAMPLE_MAIN_DNS_SERVER), ESP_NETIF_DNS_MAIN));
+    ESP_ERROR_CHECK(example_set_dns_server(netif, ipaddr_addr(EXAMPLE_BACKUP_DNS_SERVER), ESP_NETIF_DNS_BACKUP));
+
+}
+*/
 static void event_handler(void* arg, esp_event_base_t event_base,
 								int32_t event_id, void* event_data)
 {
 	if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
 		esp_wifi_connect();
 	} else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+
 		if (s_retry_num < CONFIG_ESP_MAXIMUM_RETRY) {
 			esp_wifi_connect();
 			s_retry_num++;
@@ -383,10 +425,51 @@ void wifi_init_sta(void)
 	ESP_ERROR_CHECK(esp_netif_init());
 
 	ESP_ERROR_CHECK(esp_event_loop_create_default());
-	esp_netif_create_default_wifi_sta();
+	esp_netif_t *sta_netif;
+	sta_netif = esp_netif_create_default_wifi_sta();
 
-	wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-	ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+	    // --- STATIC IP CONFIG BEFORE WIFI START ---
+	    esp_netif_dhcpc_stop(sta_netif);
+
+	    esp_netif_ip_info_t ip;
+	    memset(&ip, 0, sizeof(ip));
+	    ip.ip.addr = ipaddr_addr("192.168.1.121");
+	    ip.netmask.addr = ipaddr_addr("255.255.255.0");
+	    ip.gw.addr = ipaddr_addr("192.168.1.1");
+	    ESP_ERROR_CHECK(esp_netif_set_ip_info(sta_netif, &ip));
+
+	    // DNS
+	    esp_netif_dns_info_t dns;
+	    dns.ip.type = IPADDR_TYPE_V4;
+	    dns.ip.u_addr.ip4.addr = ipaddr_addr("192.168.1.1");
+	    ESP_ERROR_CHECK(esp_netif_set_dns_info(sta_netif, ESP_NETIF_DNS_MAIN, &dns));
+
+	    // Continue WiFi init
+	    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+	    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+	    if (udp_server_create(NULL) == ESP_FAIL) {
+	            DEBUG_PRINT_LOCAL("UDP server create socket failed");
+	        } else {
+	            DEBUG_PRINT_LOCAL("UDP server create socket succeed");
+	        }
+	        xTaskCreate(udp_server_tx_task, UDP_TX_TASK_NAME, UDP_TX_TASK_STACKSIZE, NULL, UDP_TX_TASK_PRI, NULL);
+	        xTaskCreate(udp_server_rx_task, UDP_RX_TASK_NAME, UDP_RX_TASK_STACKSIZE, NULL, UDP_RX_TASK_PRI, NULL);
+	    isInit = true;
+    //
+
+	//wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+	/*esp_netif_ip_info_t ip_info;
+	IP4_ADDR(&ip_info.ip, 192, 168, 137, 78);
+	IP4_ADDR(&ip_info.gw, 192, 168, 137, 1);
+	IP4_ADDR(&ip_info.netmask, 255, 255, 255, 0);
+	esp_netif_dhcpc_stop(my_sta); // Disable DHCP client
+	ESP_ERROR_CHECK(esp_netif_set_ip_info(my_sta, &ip_info));*/
+	//ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+
+
+	    //
+
+
 	isInit = true;
 }
 

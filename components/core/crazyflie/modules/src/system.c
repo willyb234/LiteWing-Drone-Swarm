@@ -176,7 +176,7 @@ void systemTask(void *arg)
   //ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
   wifi_init_sta();
 
-  wifi_connect_sta("OMG-UTA-DCSE 6011", "71;52Nk2");
+  wifi_connect_sta("skynet", "t3rm1n4t0r");
 
   //wifi_init_sta();
   //wifi_connect_sta("OMG-UTA-DCSE 6011","71;52Nk2");
