@@ -26,6 +26,9 @@
 #include "espnow_ctrl.h"
 #include "espnow_utils.h"
 
+
+#define DEBUG_UDP
+
 #define UDP_SERVER_PORT         2390
 #define UDP_SERVER_BUFSIZE      64
 
@@ -132,6 +135,7 @@ static esp_err_t udp_server_create(void *arg)
     return ESP_OK;
 }
 
+
 static void udp_server_rx_task(void *pvParameters)
 {
     socklen_t socklen = sizeof(source_addr);
@@ -144,6 +148,26 @@ static void udp_server_rx_task(void *pvParameters)
             continue;
         }
         int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer), 0, (struct sockaddr *)&source_addr, &socklen);
+
+        // add null terminator
+        rx_buffer[len] = 0;
+
+        DEBUG_PRINT_LOCAL("Drone says: %s",rx_buffer);
+
+        if (rx_buffer[0] == '1')
+        	redSetting = 1;
+        else if (rx_buffer[0] == '0')
+        	redSetting = 0;
+        if (rx_buffer[1] == '1')
+			greenSetting = 1;
+		else if (rx_buffer[1] == '0')
+			greenSetting = 0;
+        if (rx_buffer[2] == '1')
+			blueSetting = 1;
+		else if (rx_buffer[2] == '0')
+			blueSetting = 0;
+
+
         /* command step - receive  01 from Wi-Fi UDP */
         if (len < 0) {
             DEBUG_PRINT_LOCAL("recvfrom failed: errno %d", errno);

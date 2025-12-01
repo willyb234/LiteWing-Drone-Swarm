@@ -35,6 +35,10 @@
 
 #include "console.h"
 
+//#include "wifi_esp32.h"
+//#include "debug_cf.h"
+
+
 #define WORKER_QUEUE_LENGTH 5
 
 struct worker_work {
@@ -59,6 +63,11 @@ bool workerTest()
   return (workerQueue != NULL);
 }
 
+
+/*static _Bool prevRed = 0;
+static _Bool prevGreen = 0;
+static _Bool prevBlue = 0;*/
+
 void workerLoop()
 {
   struct worker_work work;
@@ -72,6 +81,17 @@ void workerLoop()
 
     if (work.function)
       work.function(work.arg);
+
+    /*if (redSetting != prevRed)
+    	DEBUG_PRINT_LOCAL("Red setting changed to %d" + redSetting);
+    if (redSetting != prevRed)
+        DEBUG_PRINT_LOCAL("Green setting changed to %d" + greenSetting);
+    if (redSetting != prevRed)
+        DEBUG_PRINT_LOCAL("Blue setting changed to %d" + blueSetting);
+
+    prevRed = redSetting;
+    prevGreen = greenSetting;
+    prevBlue = blueSetting;*/
   }
 }
 

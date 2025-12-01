@@ -58,7 +58,7 @@ void app_main()
     }
 
     rgbled_init();
-    set_rgbled(0,1,1);
+    set_rgbled(0,0,0);
 
 
     /*launch the system task */
