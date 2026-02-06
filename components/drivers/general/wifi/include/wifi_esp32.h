@@ -57,8 +57,5 @@ void wifi_init_sta(void);
 void wifi_connect_sta(char * ssid, char * password);
 void wifi_disconnect_sta(void);
 
-static bool redSetting = 0;
-static bool greenSetting = 0;
-static bool blueSetting = 0;
 
 #endif
