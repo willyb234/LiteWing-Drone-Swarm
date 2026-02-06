@@ -196,4 +196,5 @@ $<TARGET_FILE:idf::espressif__esp-now>
 $<TARGET_FILE:idf::wifi>
 $<TARGET_FILE:idf::adc>
 $<TARGET_FILE:idf::crazyflie>
+$<TARGET_FILE:idf::rgbled>
 $<TARGET_FILE:idf::buzzer>

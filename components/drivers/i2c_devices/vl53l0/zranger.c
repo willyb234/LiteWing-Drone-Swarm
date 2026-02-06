@@ -120,7 +120,7 @@ void zRangerInit(void)
 {
   if (isInit)
     return;
-
+  DEBUG_PRINT_LOCAL("zRangerInit called (SENSORS_ENABLE_RANGE_VL53L0X works in sensors_mpu6050_hm5883L_ms5611.c)");
   dev.I2Cx = 0;
   dev.devAddr = VL53L0X_DEFAULT_ADDRESS;
   i2cdevInit(dev.I2Cx);

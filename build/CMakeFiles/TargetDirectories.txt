@@ -993,6 +993,13 @@ C:/Users/mitch/git/LiteWing/build/esp-idf/crazyflie/CMakeFiles/list_install_comp
 C:/Users/mitch/git/LiteWing/build/esp-idf/crazyflie/CMakeFiles/install.dir
 C:/Users/mitch/git/LiteWing/build/esp-idf/crazyflie/CMakeFiles/install/local.dir
 C:/Users/mitch/git/LiteWing/build/esp-idf/crazyflie/CMakeFiles/install/strip.dir
+C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/CMakeFiles/__idf_rgbled.dir
+C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/CMakeFiles/edit_cache.dir
+C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/CMakeFiles/rebuild_cache.dir
+C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/CMakeFiles/list_install_components.dir
+C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/CMakeFiles/install.dir
+C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/CMakeFiles/install/local.dir
+C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/CMakeFiles/install/strip.dir
 C:/Users/mitch/git/LiteWing/build/esp-idf/buzzer/CMakeFiles/__idf_buzzer.dir
 C:/Users/mitch/git/LiteWing/build/esp-idf/buzzer/CMakeFiles/edit_cache.dir
 C:/Users/mitch/git/LiteWing/build/esp-idf/buzzer/CMakeFiles/rebuild_cache.dir
