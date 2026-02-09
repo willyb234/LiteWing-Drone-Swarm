@@ -664,6 +664,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/mitch/git/LiteWing/build/esp-idf/buzzer/cmake_install.cmake")
 endif()
 
