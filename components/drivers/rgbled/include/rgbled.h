@@ -6,6 +6,9 @@
 
 void rgbled_init();
 
+void process_rgb_command(uint8_t *,uint8_t);
+
 void set_rgbled(_Bool,_Bool,_Bool);
+
 
 #endif
