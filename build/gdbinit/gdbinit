@@ -1,2 +1,2 @@
-source C:/Users/mitch/git/LiteWing/build/gdbinit/symbols
-source C:/Users/mitch/git/LiteWing/build/gdbinit/connect
+source /Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/gdbinit/symbols
+source /Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/gdbinit/connect

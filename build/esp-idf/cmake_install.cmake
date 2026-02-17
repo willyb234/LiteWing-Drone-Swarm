@@ -1,8 +1,8 @@
-# Install script for directory: C:/Espressif/frameworks/esp-idf-v5.5.1
+# Install script for directory: /Users/caedmonboutwell/esp/esp-idf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/ESPDrone")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,641 +34,647 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump.exe")
+  set(CMAKE_OBJDUMP "/Users/caedmonboutwell/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20251107/xtensa-esp-elf/bin/xtensa-esp32s3-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/xtensa/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/xtensa/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_gpio/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_gpio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_pm/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_pm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/mbedtls/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/mbedtls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/bootloader/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/bootloader/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esptool_py/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esptool_py/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/partition_table/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/partition_table/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_app_format/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_app_format/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_bootloader_format/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_bootloader_format/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/app_update/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/app_update/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_partition/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_partition/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/efuse/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/efuse/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/bootloader_support/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/bootloader_support/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_mm/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_mm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/spi_flash/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/spi_flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_system/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_system/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_common/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_rom/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_rom/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/hal/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/hal/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/log/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/log/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/heap/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/heap/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/soc/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/soc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_security/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_security/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_hw_support/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_hw_support/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/freertos/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/freertos/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/newlib/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/newlib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/pthread/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/pthread/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/cxx/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/cxx/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_timer/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_timer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_gptimer/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_gptimer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_ringbuf/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_ringbuf/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_uart/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_uart/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/app_trace/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/app_trace/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_event/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_event/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/nvs_flash/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/nvs_flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_phy/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_phy/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_usb_serial_jtag/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_usb_serial_jtag/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_vfs_console/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_vfs_console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/vfs/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/vfs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/lwip/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/lwip/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_netif_stack/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_netif_stack/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_netif/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_netif/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/wpa_supplicant/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/wpa_supplicant/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_coex/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_coex/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_wifi/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_wifi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_spi/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_spi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_gdbstub/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_gdbstub/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/bt/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/bt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/unity/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/unity/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/cmock/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/cmock/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/console/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_pcnt/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_pcnt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_mcpwm/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_mcpwm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_ana_cmpr/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_ana_cmpr/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_i2s/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_i2s/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/sdmmc/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/sdmmc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_sdmmc/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_sdmmc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_sdspi/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_sdspi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_sdio/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_sdio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_dac/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_dac/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_bitscrambler/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_bitscrambler/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_rmt/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_rmt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_tsens/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_tsens/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_sdm/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_sdm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_i2c/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_i2c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_ledc/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_ledc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_parlio/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_parlio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_twai/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_twai/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/driver/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/driver/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/http_parser/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/http_parser/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp-tls/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp-tls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_adc/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_adc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_isp/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_isp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_cam/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_cam/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_psram/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_psram/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_jpeg/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_jpeg/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_ppa/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_ppa/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_driver_touch_sens/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_driver_touch_sens/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_eth/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_eth/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_hid/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_hid/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/tcp_transport/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/tcp_transport/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_http_client/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_http_client/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_http_server/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_http_server/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_https_ota/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_https_ota/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_https_server/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_https_server/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_lcd/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_lcd/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/protobuf-c/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/protobuf-c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/protocomm/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/protocomm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/esp_local_ctrl/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/esp_local_ctrl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/espcoredump/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/espcoredump/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/wear_levelling/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/wear_levelling/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/fatfs/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/fatfs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/idf_test/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/idf_test/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/ieee802154/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/ieee802154/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/json/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/json/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/mqtt/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/mqtt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/nvs_sec_provider/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/nvs_sec_provider/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/openthread/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/openthread/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/perfmon/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/perfmon/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/rt/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/rt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/spiffs/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/spiffs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/touch_element/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/touch_element/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/ulp/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/ulp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/usb/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/usb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/wifi_provisioning/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/wifi_provisioning/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/main/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/main/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/config/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/config/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/motors/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/motors/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/platform/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/platform/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/i2c_bus/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/rgbled/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/deck/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/i2c_bus/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/mpu6050/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/deck/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/ms5611/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/mpu6050/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/hmc5883l/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/ms5611/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/pmw3901/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/hmc5883l/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/vl53l1/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/pmw3901/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/vl53l0/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/vl53l1/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/led/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/vl53l0/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/eeprom/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/led/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/dsp_lib/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/eeprom/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/espressif__cmake_utilities/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/dsp_lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/espressif__esp-now/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/espressif__cmake_utilities/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/wifi/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/espressif__esp-now/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/adc/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/wifi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/crazyflie/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/adc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/rgbled/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/crazyflie/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/mitch/git/LiteWing/build/esp-idf/buzzer/cmake_install.cmake")
+  include("/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/buzzer/cmake_install.cmake")
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "/Users/caedmonboutwell/Code/Senior Design/LiteWing-Drone-Swarm/build/esp-idf/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

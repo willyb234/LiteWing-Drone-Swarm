@@ -162,9 +162,10 @@ $<TARGET_FILE:__idf_json>
 $<TARGET_FILE:idf::main>
 $<TARGET_FILE:idf::motors>
 $<TARGET_FILE:__idf_crazyflie>
-$<TARGET_FILE:__idf_i2c_bus>
+$<TARGET_FILE:__idf_rgbled>
 $<TARGET_FILE:__idf_platform>
 $<TARGET_FILE:__idf_motors>
+$<TARGET_FILE:__idf_i2c_bus>
 $<TARGET_FILE:__idf_deck>
 $<TARGET_FILE:__idf_mpu6050>
 $<TARGET_FILE:__idf_ms5611>
@@ -181,6 +182,7 @@ $<TARGET_FILE:__idf_fatfs>
 $<TARGET_FILE:__idf_spiffs>
 $<TARGET_FILE:__idf_adc>
 $<TARGET_FILE:idf::platform>
+$<TARGET_FILE:idf::rgbled>
 $<TARGET_FILE:idf::i2c_bus>
 $<TARGET_FILE:idf::deck>
 $<TARGET_FILE:idf::mpu6050>
@@ -196,5 +198,4 @@ $<TARGET_FILE:idf::espressif__esp-now>
 $<TARGET_FILE:idf::wifi>
 $<TARGET_FILE:idf::adc>
 $<TARGET_FILE:idf::crazyflie>
-$<TARGET_FILE:idf::rgbled>
 $<TARGET_FILE:idf::buzzer>

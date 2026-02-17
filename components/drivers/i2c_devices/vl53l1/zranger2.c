@@ -83,6 +83,9 @@ void zRanger2Init(void)
 {
   if (isInit)
     return;
+  
+  DEBUG_PRINT_LOCAL("zRanger2Init called (SENSORS_ENABLE_RANGE_VL53L1X works in sensors_mpu6050_hm5883L_ms5611.c)");
+
 
   if (vl53l1xInit(&dev, I2C1_DEV))
   {
