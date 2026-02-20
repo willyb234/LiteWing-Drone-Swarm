@@ -33,6 +33,8 @@
 #define DEBUG_MODULE "APP_MAIN"
 #include "debug_cf.h"
 
+#include "rgbled.h"
+
 void app_main()
 {
     /*
@@ -54,6 +56,10 @@ void app_main()
     if (platformInit() == false) {
         while (1);//if  firmware is running on the wrong hardware, Halt
     }
+
+    rgbled_init();
+    set_rgbled(0,1,1);
+
 
     /*launch the system task */
     systemLaunch();
