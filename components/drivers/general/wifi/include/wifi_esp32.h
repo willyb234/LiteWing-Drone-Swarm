@@ -53,9 +53,4 @@ bool wifiGetDataBlocking(UDPPacket *in);
  */
 bool wifiSendData(uint32_t size, uint8_t* data);
 
-void wifi_init_sta(void);
-void wifi_connect_sta(char * ssid, char * password);
-void wifi_disconnect_sta(void);
-
-
 #endif

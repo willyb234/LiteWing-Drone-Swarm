@@ -96,10 +96,7 @@ static void flowdeckTask(void *param)
 
         // Flip motion information to comply with sensor mounting
         // (might need to be changed if mounted differently)
-        // Adjust flow axes to match body frame (USB-C side is forward).
-        // Observed: forward -> deltaY positive, right -> deltaX negative.
-        // Map so forward/right become positive body-frame X/Y.
-        int16_t accpx = currentMotion.deltaY;
+        int16_t accpx = -currentMotion.deltaY;
         int16_t accpy = -currentMotion.deltaX;
 
         // Outlier removal

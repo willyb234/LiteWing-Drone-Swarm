@@ -512,10 +512,10 @@ static void sensorsDeviceInit(void)
 
     if (zRangerTest() == true) {
         isVl53l0xPresent = true;
-        DEBUG_PRINT_LOCAL("VL53L0X I2C connection [OK].\n");
+        DEBUG_PRINTI("VL53L0X I2C connection [OK].\n");
     } else {
         //TODO: Should sensor test fail hard if no connection
-    	DEBUG_PRINT_LOCAL("VL53L0X I2C connection [FAIL].\n");
+        DEBUG_PRINTW("VL53L0X I2C connection [FAIL].\n");
     }
 
 #endif
@@ -526,14 +526,14 @@ static void sensorsDeviceInit(void)
     if (flowdeck2Test() == true) {
         isPmw3901Present = true;
         setCommandermode(POSHOLD_MODE);
-        DEBUG_PRINT_LOCAL("PMW3901 SPI connection [OK].\n");
+        DEBUG_PRINTI("PMW3901 SPI connection [OK].\n");
     } else {
         //TODO: Should sensor test fail hard if no connection
-    	DEBUG_PRINT_LOCAL("PMW3901 SPI connection [FAIL].\n");
+        DEBUG_PRINTW("PMW3901 SPI connection [FAIL].\n");
     }
 #endif
 
-    DEBUG_PRINT_LOCAL("sensors init done");
+    DEBUG_PRINTI("sensors init done");
     /*
     *get calib angle from NVS
     */

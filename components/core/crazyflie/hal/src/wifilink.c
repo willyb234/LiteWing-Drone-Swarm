@@ -42,8 +42,6 @@
 #include "semphr.h"
 #include "stm32_legacy.h"
 
-#include "rgbled.h"
-
 #define DEBUG_MODULE "WIFILINK"
 #include "debug_cf.h"
 #include "static_mem.h"
@@ -151,8 +149,6 @@ static void wifilinkTask(void *param)
 
         /* command step - receive 05 send to crtpPacketDelivery queue */
         xQueueSend(crtpPacketDelivery, &p, M2T(sendWaitMs));
-
-        process_rgb_command(wifiIn.data,wifiIn.size);
     }
 
 }
