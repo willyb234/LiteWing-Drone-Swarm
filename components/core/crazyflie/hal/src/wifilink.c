@@ -41,6 +41,7 @@
 #include "queuemonitor.h"
 #include "semphr.h"
 #include "stm32_legacy.h"
+#include "rgbled.h"
 
 #define DEBUG_MODULE "WIFILINK"
 #include "debug_cf.h"
