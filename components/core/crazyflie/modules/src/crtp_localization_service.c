@@ -48,11 +48,9 @@
 #include "peer_localization.h"
 
 #include "num.h"
+#include "cfassert.h"
 
 #define NBR_OF_RANGES_IN_PACKET   5
-#define NBR_OF_SWEEPS_IN_PACKET   2
-#define NBR_OF_SENSOR_DIFFS_IN_PACKET   3
-#define NBR_OF_BASESTATIONS   2
 #define NBR_OF_
 #define DEFAULT_EMERGENCY_STOP_TIMEOUT (1 * RATE_MAIN_LOOP)
 
@@ -72,17 +70,6 @@ typedef struct
     float range;
   } __attribute__((packed)) ranges[NBR_OF_RANGES_IN_PACKET];
 } __attribute__((packed)) rangePacket;
-
-typedef struct {
-  uint8_t type;
-  uint8_t basestation;
-  struct {
-  float sweep;
-    struct {
-      uint16_t angleDiff;
-    } __attribute__((packed)) angleDiffs [NBR_OF_SENSOR_DIFFS_IN_PACKET];
-  } __attribute__((packed)) sweeps [NBR_OF_SWEEPS_IN_PACKET];
-} __attribute__((packed)) anglePacket;
 
 // up to 4 items per CRTP packet
 typedef struct {
@@ -110,8 +97,6 @@ static CRTPPacket pkRange;
 static uint8_t rangeIndex;
 static bool enableRangeStreamFloat = false;
 
-static CRTPPacket LhAngle;
-static bool enableLighthouseAngleStream = false;
 static float extPosStdDev = 0.01;
 static float extQuatStdDev = 4.5e-3;
 static bool isInit = false;
@@ -213,13 +198,11 @@ static void extPosePackedHandler(const CRTPPacket* pk) {
 
 static void lpsShortLppPacketHandler(CRTPPacket* pk) {
   if (pk->size >= 2) {
-    bool success = lpsSendLppShort(pk->data[1], &pk->data[2], pk->size-2);
-
     pk->port = CRTP_PORT_LOCALIZATION;
     pk->channel = GENERIC_TYPE;
     pk->size = 3;
     pk->data[0] = LPS_SHORT_LPP_PACKET;
-    pk->data[2] = success?1:0;
+    pk->data[2] = 0;
     crtpSendPacket(pk);
   }
 }
@@ -235,25 +218,13 @@ typedef union {
 } __attribute__((packed)) LhPersistArgs_t;
 
 static void lhPersistDataWorker(void* arg) {
-  LhPersistArgs_t* args = (LhPersistArgs_t*) &arg;
-
-  bool result = true;
-
-  for (int baseStation = 0; baseStation < PULSE_PROCESSOR_N_BASE_STATIONS; baseStation++) {
-    uint16_t mask = 1 << baseStation;
-    bool storeGeo = (args->geoDataBsField & mask) != 0;
-    bool storeCalibration = (args->calibrationDataBsField & mask) != 0;
-    if (! lighthouseCorePersistData(baseStation, storeGeo, storeCalibration)) {
-      result = false;
-      break;
-    }
-  }
+  (void)arg;
 
   CRTPPacket response = {
     .port = CRTP_PORT_LOCALIZATION,
     .channel = GENERIC_TYPE,
     .size = 2,
-    .data = {LH_PERSIST_DATA, result}
+    .data = {LH_PERSIST_DATA, 0}
   };
 
   crtpSendPacket(&response);
@@ -261,8 +232,7 @@ static void lhPersistDataWorker(void* arg) {
 
 static void lhPersistDataHandler(CRTPPacket* pk) {
   if (pk->size >= (1 + sizeof(LhPersistArgs_t))) {
-    LhPersistArgs_t* args = (LhPersistArgs_t*) &pk->data[1];
-    workerSchedule(lhPersistDataWorker, (void*)args->combinedField);
+    lhPersistDataWorker(NULL);
   }
 }
 
@@ -339,32 +309,6 @@ void locSrvSendRangeFloat(uint8_t id, float range)
   }
 }
 
-void locSrvSendLighthouseAngle(int basestation, pulseProcessorResult_t* angles)
-{
-  anglePacket *ap = (anglePacket *)LhAngle.data;
-
-  if (enableLighthouseAngleStream) {
-    ap->basestation = basestation;
-
-    for(uint8_t its = 0; its < NBR_OF_SWEEPS_IN_PACKET; its++) {
-      float angle_first_sensor =  angles->sensorMeasurementsLh1[0].baseStatonMeasurements[basestation].correctedAngles[its];
-      ap->sweeps[its].sweep = angle_first_sensor;
-
-      for(uint8_t itd = 0; itd < NBR_OF_SENSOR_DIFFS_IN_PACKET; itd++) {
-        float angle_other_sensor = angles->sensorMeasurementsLh1[itd + 1].baseStatonMeasurements[basestation].correctedAngles[its];
-        uint16_t angle_diff = single2half(angle_first_sensor - angle_other_sensor);
-        ap->sweeps[its].angleDiffs[itd].angleDiff = angle_diff;
-      }
-    }
-
-    ap->type = LH_ANGLE_STREAM;
-    LhAngle.port = CRTP_PORT_LOCALIZATION;
-    LhAngle.channel = GENERIC_TYPE;
-    LhAngle.size = sizeof(anglePacket);
-    crtpSendPacket(&LhAngle);
-  }
-}
-
 
 LOG_GROUP_START(ext_pos)
   LOG_ADD(LOG_FLOAT, X, &ext_pos.x)
@@ -378,7 +322,6 @@ LOG_GROUP_STOP(locSrvZ)
 
 PARAM_GROUP_START(locSrv)
   PARAM_ADD(PARAM_UINT8, enRangeStreamFP32, &enableRangeStreamFloat)
-  PARAM_ADD(PARAM_UINT8, enLhAngleStream, &enableLighthouseAngleStream)
   PARAM_ADD(PARAM_FLOAT, extPosStdDev, &extPosStdDev)
   PARAM_ADD(PARAM_FLOAT, extQuatStdDev, &extQuatStdDev)
 PARAM_GROUP_STOP(locSrv)

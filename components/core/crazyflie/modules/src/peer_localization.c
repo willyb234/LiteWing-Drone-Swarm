@@ -1,5 +1,5 @@
 #include "config.h"
-#include "debug.h"
+#include "debug_cf.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "peer_localization.h"

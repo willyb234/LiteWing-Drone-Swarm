@@ -66,10 +66,8 @@ typedef enum
 } locsrv_t;
 
 // Set up the callback for the CRTP_PORT_LOCALIZATION
-void locSrvInit(void);
+void locSrvInit();
 
 // Send range in float. After 5 ranges it will send the packet.
 void locSrvSendRangeFloat(uint8_t id, float range);
-//void locSrvSendLighthouseAngle(int basestation, pulseProcessorResult_t* angles);
-
 #endif /* _CRTP_LOCALIZATION_SERVICE_H_ */

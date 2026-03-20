@@ -308,7 +308,7 @@ void wifiInit(void)
     ESP_ERROR_CHECK(espnow_ctrl_responder_bind(30 * 1000, -55, NULL));
     espnow_ctrl_responder_data(espnow_ctrl_data_cb);
     esp_netif_ip_info_t ip_info = {
-        .ip.addr = ipaddr_addr("192.168.1.121"),
+        .ip.addr = ipaddr_addr("192.168.1."),
         .netmask.addr = ipaddr_addr("255.255.255.0"),
         .gw.addr      = ipaddr_addr("192.168.1.1"),
     };
@@ -433,7 +433,7 @@ void wifi_init_sta(void)
 
 	    esp_netif_ip_info_t ip;
 	    memset(&ip, 0, sizeof(ip));
-	    ip.ip.addr = ipaddr_addr("192.168.1.121");
+	    ip.ip.addr = ipaddr_addr("192.168.1.210");
 	    ip.netmask.addr = ipaddr_addr("255.255.255.0");
 	    ip.gw.addr = ipaddr_addr("192.168.1.1");
 	    ESP_ERROR_CHECK(esp_netif_set_ip_info(sta_netif, &ip));
