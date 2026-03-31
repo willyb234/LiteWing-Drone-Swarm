@@ -83,6 +83,7 @@
 #include "debug_cf.h"
 
 
+// Baro updates disabled for Vicon-only operation (IMU + extpose)
 // #define KALMAN_USE_BARO_UPDATE
 
 
@@ -517,12 +518,14 @@ static bool updateQueuedMeasurments(const Axis3f *gyro, const uint32_t tick) {
    * we therefore consume all measurements since the last loop, rather than accumulating
    */
 
+#ifndef DISABLE_TOF_IN_EKF
   tofMeasurement_t tof;
   while (stateEstimatorHasTOFPacket(&tof))
   {
     kalmanCoreUpdateWithTof(&coreData, &tof);
     doneUpdate = true;
   }
+#endif
 
   yawErrorMeasurement_t yawError;
   while (stateEstimatorHasYawErrorPacket(&yawError))
@@ -531,6 +534,7 @@ static bool updateQueuedMeasurments(const Axis3f *gyro, const uint32_t tick) {
     doneUpdate = true;
   }
 
+#ifndef DISABLE_UWB_IN_EKF
   heightMeasurement_t height;
   while (stateEstimatorHasHeightPacket(&height))
   {
@@ -544,6 +548,7 @@ static bool updateQueuedMeasurments(const Axis3f *gyro, const uint32_t tick) {
     kalmanCoreUpdateWithDistance(&coreData, &dist);
     doneUpdate = true;
   }
+#endif
 
   positionMeasurement_t pos;
   while (stateEstimatorHasPositionMeasurement(&pos))
@@ -559,19 +564,23 @@ static bool updateQueuedMeasurments(const Axis3f *gyro, const uint32_t tick) {
     doneUpdate = true;
   }
 
+#ifndef DISABLE_UWB_IN_EKF
   tdoaMeasurement_t tdoa;
   while (stateEstimatorHasTDOAPacket(&tdoa))
   {
     kalmanCoreUpdateWithTDOA(&coreData, &tdoa);
     doneUpdate = true;
   }
+#endif
 
+#ifndef DISABLE_FLOW_IN_EKF
   flowMeasurement_t flow;
   while (stateEstimatorHasFlowPacket(&flow))
   {
     kalmanCoreUpdateWithFlow(&coreData, &flow, gyro);
     doneUpdate = true;
   }
+#endif
 
   // sweepAngleMeasurement_t angles;
   // while (stateEstimatorHasSweepAnglesPacket(&angles))

@@ -724,7 +724,7 @@ void logRunBlock(void * arg)
 
   xSemaphoreTake(logLock, portMAX_DELAY);
 
-  timestamp = ((long long)xTaskGetTickCount())/portTICK_RATE_MS;
+  timestamp = ((long long)xTaskGetTickCount())/portTICK_PERIOD_MS;
 
   pk.header = CRTP_HEADER(CRTP_PORT_LOG, LOG_CH);
   pk.size = 4;
